@@ -1,0 +1,37 @@
+<!--When you are creating a form in Angular app , you MUST name the form -->
+<!--Synatx is #nameOfTheForm = "ngForm"-->
+<!--ngSubmit event is triggered when you click on submit button-->
+<!--In this example onCLick of Submit button we are calling a function "ourCustomSubmitFunction()"-->
+<form #firstForm="ngForm" (ngSubmit)="ourCustomSubmitFunction()">
+
+  <!-- For every input fields inside your form it must have a name attribute and ngModel-->
+  First Name: <input type="text" class="form-control"
+                     name="firstName"
+                     [(ngModel)]="firstName"
+                     required />
+<!-- ngModel attribute value which is tored insied a variable, that variable must be declared in the-->
+  <!-- typescript component file. In this case "firstName" and "lastName" are the variables which are-->
+  <!-- declared in the compoenent typescript file-->
+  Last Name: <input type="text" class="form-control"
+                     name="lastName"
+                     [(ngModel)]="lastName"
+                     required />
+<button>Submit</button>
+</form>
+
+You submitted : {{msg}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

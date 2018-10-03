@@ -1,0 +1,17 @@
+<p>
+  post-api works!
+</p>
+
+<ul>
+  <li *ngFor="let data of temp_list">
+    <a (click)="showTaskDetail(data)">{{data.name}} with LocalStorage</a>
+    <br>
+    <a [routerLink]="['/task-detail-id', data._id]">{{data.name}} without LocalStorage</a>
+    <span class="close" (click)="deleteTodoItem(data._id)" >&times;</span>
+  </li>
+  <li><a href="/hero">This is the navigation/redirect/load to next component/page/html/URL technique using HREF</a></li>
+</ul>
+<form #postAPI = "ngForm" (ngSubmit)="createTask()">
+  <input type="text" name="taskName" [(ngModel)] = "taskName">
+  <button>Submit</button>
+</form>

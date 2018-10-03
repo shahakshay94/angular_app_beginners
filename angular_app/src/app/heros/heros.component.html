@@ -1,0 +1,29 @@
+
+<h3 *ngIf="selectedHero">
+  {{selectedHero.id}}  -
+  {{selectedHero.name }}  -
+  {{selectedHero.superpower}}.
+</h3>
+
+
+<ul>
+  <li *ngFor = "let hero of heros"
+      (click)="increaseCount(hero)">
+    {{hero.name | removeSpaces}} has {{hero.superpower | lowercase}} super power !!
+
+    <span class="close" (click)="deleteSuperHero(hero.id)">&times;</span></li>
+</ul>
+<form #heroForm = "ngForm" (ngSubmit)="addHero()">
+  Name of the hero :
+  <input type="text"
+         name = "heroName"
+         [(ngModel)] = "heroName"
+         required />
+  SuperPower :
+  <input type="text"
+         name = "heroSuperPower"
+         [(ngModel)] = "heroSuperPower"
+         required />
+
+  <button>Submit</button>
+</form>

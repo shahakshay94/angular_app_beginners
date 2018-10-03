@@ -1,0 +1,23 @@
+<p>
+  midterm works!
+</p>
+
+<ul>
+  <li *ngFor="let data of temp_list">
+    {{data.name}},
+    {{data.color}},
+    {{data.id}}
+  </li>
+</ul>
+<!-- every angular form MUST have a name-->
+<form #midtermForm="ngForm" (ngSubmit)="createJob()">
+  <input type="text" name="jobName" [(ngModel)]=" jobObj.name"/>
+  <input type="text" name="jobDescription" [(ngModel)]=" jobObj.job"/>
+  <button>Submit</button>
+</form>
+
+<form #otherWayForm="ngForm" (ngSubmit)="createJobWithOtherWay()">
+  <input type="text" name="jobName" [(ngModel)]=" jobName"/>
+  <input type="text" name="jobDescription" [(ngModel)]=" jobDescription"/>
+  <button>Submit</button>
+</form>

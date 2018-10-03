@@ -1,0 +1,7 @@
+
+<b>Huge Contacts list...</b>
+  <ul>
+    <!-- ngFor syntax-->
+  <li *ngFor="let contact of contact_list">{{contact.name}}
+    <img style="height: 50px;width: 50px" [src]="contact.image"><span class="close">&times;</span></li>
+</ul>
