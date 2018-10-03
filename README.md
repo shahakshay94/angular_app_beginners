@@ -8,7 +8,8 @@ Nodejs Backend code is not written by me. I had downloaded the code from somewhe
 3. Open browser and goto localhost:4200
 
 # Steps to run Nodejs app
-1. npm install
-2. node server.js
+1. cd into nodejs_app
+2. npm install
+3. node server.js
 
 # make sure that your mongodb is running on it's default port.
